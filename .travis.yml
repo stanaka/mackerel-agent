@@ -1,7 +1,7 @@
 language: go
 go:
 - 1.5
-env: PATH=/home/travis/gopath/bin:$PATH
+env: PATH=/home/travis/gopath/bin:$PATH GOBIN=/home/travis/gopath/bin
 install:
 - sudo apt-get update
 - DEBIAN_FRONTEND=noninteractive sudo apt-get install -y rpm devscripts debhelper
