@@ -229,6 +229,7 @@ sub next_version {
         return $next_version = $1;
     } elsif(current_branch() =~ /^master$/){
         my $next = `git log --merges --oneline`;
+        infof "next_version: $next";
         if($next =~ /^.+Merge pull request #[0-9]+ from .+\/bump-version-([0-9\.]+)$/m){
             return $next_version = $1;
         }
