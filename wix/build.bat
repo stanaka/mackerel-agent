@@ -1,3 +1,5 @@
+echo on
+
 go get -d -v -t ./...
 
 pushd %0\..\..
